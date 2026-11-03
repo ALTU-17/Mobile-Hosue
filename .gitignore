@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+build
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+.env*.local
+dev-*.log
+dev-*.pid
+.dev-server.*
+/freebuff-sites-build/
+/.open-next/
+/.wrangler/

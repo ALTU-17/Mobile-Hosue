@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500">
+  <defs>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17130D"/>
+      <stop offset="1" stop-color="#050504"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="26" flood-color="#7F5D2E" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1500" fill="#F2EBDD"/>
+  <circle cx="890" cy="410" r="300" fill="#F0A33A"/>
+  <circle cx="890" cy="410" r="300" fill="none" stroke="#0B0A09" stroke-width="2"/>
+  <rect x="42" y="42" width="1116" height="1416" fill="none" stroke="#0B0A09" stroke-width="2"/>
+  <text x="104" y="160" font-family="monospace" font-size="19" letter-spacing="6" fill="#0B0A09">MOBILE HOUSE / NEW USMANPURA</text>
+  <text x="98" y="620" font-family="Arial, sans-serif" font-size="420" font-weight="800" letter-spacing="-30" fill="#0B0A09">M</text>
+  <text x="455" y="620" font-family="Arial, sans-serif" font-size="420" font-weight="800" letter-spacing="-30" fill="#0B0A09">H</text>
+  <path d="M104 700h992" stroke="#0B0A09" stroke-width="2"/>
+  <text x="104" y="790" font-family="Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="2" fill="#0B0A09">YOUR MOBILE</text>
+  <text x="104" y="860" font-family="Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="2" fill="#0B0A09">PARTNER.</text>
+  <g filter="url(#soft)" transform="translate(800 730) rotate(9 140 300)">
+    <rect width="280" height="600" rx="46" fill="url(#ink)" stroke="#0B0A09" stroke-width="3"/>
+    <rect x="18" y="18" width="244" height="564" rx="34" fill="#1B1711"/>
+    <rect x="40" y="52" width="200" height="210" rx="22" fill="#F0A33A"/>
+    <circle cx="170" cy="120" r="30" fill="#0B0A09"/>
+    <circle cx="170" cy="120" r="13" fill="#335868"/>
+    <text x="140" y="505" text-anchor="middle" font-family="Georgia, serif" font-size="46" fill="#F2EBDD">MH</text>
+    <text x="140" y="535" text-anchor="middle" font-family="monospace" font-size="12" letter-spacing="3" fill="#C9A25E">MOBILE HOUSE</text>
+  </g>
+  <rect x="104" y="990" width="600" height="1" fill="#0B0A09"/>
+  <g font-family="monospace" font-size="19" letter-spacing="2" fill="#0B0A09">
+    <text x="104" y="1048">01 / SEALED &amp; ORIGINAL</text>
+    <text x="104" y="1100">02 / GST BILL, EVERY TIME</text>
+    <text x="104" y="1152">03 / EASY EXCHANGE</text>
+    <text x="104" y="1204">04 / FINANCE AVAILABLE</text>
+  </g>
+  <rect x="104" y="1300" width="360" height="78" rx="39" fill="#0B0A09"/>
+  <text x="284" y="1348" text-anchor="middle" font-family="monospace" font-size="18" letter-spacing="3" fill="#F2EBDD">MOBILEHOUSE_MH20</text>
+  <text x="1096" y="1424" text-anchor="end" font-family="monospace" font-size="16" letter-spacing="3" fill="#0B0A09">MH-20 / 431005</text>
+</svg>

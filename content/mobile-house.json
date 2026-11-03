@@ -1,0 +1,474 @@
+{
+  "store": {
+    "name": "Mobile House",
+    "tagline": "Your Mobile Partner",
+    "owner": "Imran Shaikh",
+    "phoneDisplay": "+91 98221 17784",
+    "phoneRaw": "+919822117784",
+    "whatsappDisplay": "+91 91750 00060",
+    "whatsappRaw": "919175000060",
+    "instagramHandle": "@mobilehouse_mh20",
+    "instagramUrl": "https://www.instagram.com/mobilehouse_mh20/",
+    "instagramFollowers": 8803,
+    "rating": 4.9,
+    "reviewCount": 53,
+    "reviewUrl": "https://www.google.com/maps/search/?api=1&query=Mobile+House+Hari+Om+Complex+New+Usmanpura+Chhatrapati+Sambhajinagar (Aurangabad)+Maharashtra+431005",
+    "address": {
+      "line1": "Shop No. 8–9, Hari Om Complex",
+      "line2": "Govt. Engineering College Road, opp. Badi Masjid",
+      "line3": "Rachanakar Colony, New Usmanpura",
+      "city": "Chhatrapati Sambhajinagar (Aurangabad)",
+      "state": "Maharashtra",
+      "postalCode": "431005"
+    },
+    "hoursLabel": "10:30 am – 10:30 pm, all days",
+    "hoursNote": "Festival hours may differ. WhatsApp before you visit on a holiday.",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mobile+House+Hari+Om+Complex+Govt+Engineering+College+Road+New+Usmanpura+Chhatrapati+Sambhajinagar (Aurangabad)+431005",
+    "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=Mobile+House+Hari+Om+Complex+Govt+Engineering+College+Road+New+Usmanpura+Chhatrapati+Sambhajinagar (Aurangabad)+431005",
+    "sampleData": true,
+    "updatedAt": "2026-10-30"
+  },
+  "brands": [
+    "Apple",
+    "Samsung",
+    "OnePlus",
+    "Xiaomi",
+    "Google",
+    "Realme",
+    "Nothing",
+    "Infinix",
+    "Poco",
+    "Vivo",
+    "Tecno",
+    "Lava",
+    "Redmi",
+    "Honor",
+    "HTC"
+  ],
+  "products": [
+    {
+      "slug": "samsung-galaxy-s25-ultra",
+      "brand": "Samsung",
+      "name": "Galaxy S25 Ultra",
+      "tagline": "The titanium flagship with a camera for every story.",
+      "featured": true,
+      "fiveG": true,
+      "stock": "in_stock",
+      "colors": [
+        { "name": "Titanium Black", "hex": "#2C2C2E", "family": "Black", "available": true },
+        { "name": "Titanium Gray", "hex": "#8A8A8B", "family": "Silver", "available": true },
+        { "name": "Titanium Blue", "hex": "#52627A", "family": "Blue", "available": true }
+      ],
+      "variants": [
+        { "ram": 12, "storage": 256, "price": 86999, "mrp": 99999, "available": true },
+        { "ram": 12, "storage": 512, "price": 104999, "mrp": 119999, "available": false }
+      ],
+      "specs": {
+        "display": "6.9\" QHD+ AMOLED, 120Hz",
+        "camera": "200MP + 50MP + 50MP + 10MP",
+        "battery": "5000mAh, 45W",
+        "chipset": "Snapdragon 8 Elite"
+      },
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "slug": "samsung-galaxy-a17-5g",
+      "brand": "Samsung",
+      "name": "Galaxy A17 5G",
+      "tagline": "Everyday 5G, all-day battery, easy on the pocket.",
+      "featured": false,
+      "fiveG": true,
+      "stock": "low_stock",
+      "colors": [
+        { "name": "Awesome Black", "hex": "#242426", "family": "Black", "available": true },
+        { "name": "Awesome Blue", "hex": "#38566B", "family": "Blue", "available": true },
+        { "name": "Awesome Gray", "hex": "#B8B6B1", "family": "Silver", "available": false }
+      ],
+      "variants": [
+        { "ram": 8, "storage": 128, "price": 24999, "mrp": 34999, "available": true },
+        { "ram": 8, "storage": 256, "price": 27999, "mrp": 38999, "available": false }
+      ],
+      "specs": {
+        "display": "6.7\" Super AMOLED, 120Hz",
+        "camera": "50MP + 5MP + 2MP",
+        "battery": "5000mAh, 25W",
+        "chipset": "Exynos 1330"
+      },
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "slug": "samsung-galaxy-a57-5g",
+      "brand": "Samsung",
+      "name": "Galaxy A57 5G",
+      "tagline": "A bright screen, a serious camera and a little more room.",
+      "featured": false,
+      "fiveG": true,
+      "stock": "in_stock",
+      "colors": [
+        { "name": "Awesome Navy", "hex": "#27364B", "family": "Blue", "available": true },
+        { "name": "Awesome Lilac", "hex": "#C7B7D8", "family": "Purple", "available": true },
+        { "name": "Awesome Ice", "hex": "#DDE5E7", "family": "Silver", "available": true }
+      ],
+      "variants": [
+        { "ram": 8, "storage": 256, "price": 42999, "mrp": 62999, "available": true },
+        { "ram": 12, "storage": 256, "price": 46999, "mrp": 66999, "available": false }
+      ],
+      "specs": {
+        "display": "6.7\" Super AMOLED, 120Hz",
+        "camera": "50MP + 12MP + 5MP",
+        "battery": "5000mAh, 45W",
+        "chipset": "Exynos 1580"
+      },
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "slug": "samsung-galaxy-s26-ultra",
+      "brand": "Samsung",
+      "name": "Galaxy S26 Ultra",
+      "tagline": "The newest Ultra. Ask for today's arrival price.",
+      "featured": false,
+      "fiveG": true,
+      "stock": "on_order",
+      "colors": [
+        { "name": "Titanium Black", "hex": "#242427", "family": "Black", "available": false },
+        { "name": "Titanium White", "hex": "#E7E2D8", "family": "White", "available": false },
+        { "name": "Cobalt Violet", "hex": "#786A9A", "family": "Purple", "available": false }
+      ],
+      "variants": [
+        { "ram": 12, "storage": 256, "price": 114999, "mrp": 144999, "available": false },
+        { "ram": 12, "storage": 512, "price": 124999, "mrp": 154999, "available": false }
+      ],
+      "specs": {
+        "display": "6.9\" QHD+ AMOLED, 120Hz",
+        "camera": "200MP + 50MP + 50MP + 10MP",
+        "battery": "5200mAh, 60W",
+        "chipset": "Snapdragon 8 Elite Gen 5"
+      },
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "slug": "apple-iphone-16",
+      "brand": "Apple",
+      "name": "iPhone 16",
+      "tagline": "The iPhone everyone knows, in the colour you actually want.",
+      "featured": false,
+      "fiveG": true,
+      "stock": "in_stock",
+      "colors": [
+        { "name": "Black", "hex": "#292A2D", "family": "Black", "available": true },
+        { "name": "White", "hex": "#E9E6E0", "family": "White", "available": true },
+        { "name": "Pink", "hex": "#E7C3C9", "family": "Pink", "available": true },
+        { "name": "Teal", "hex": "#7FA6A0", "family": "Green", "available": false }
+      ],
+      "variants": [
+        { "ram": 8, "storage": 128, "price": 69900, "mrp": 79900, "available": true },
+        { "ram": 8, "storage": 256, "price": 79900, "mrp": 89900, "available": true }
+      ],
+      "specs": {
+        "display": "6.1\" Super Retina XDR",
+        "camera": "48MP Fusion + 12MP Ultra Wide",
+        "battery": "Up to 22 hours video",
+        "chipset": "A18"
+      },
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "slug": "oneplus-15",
+      "brand": "OnePlus",
+      "name": "OnePlus 15",
+      "tagline": "Fast charging, fast screen, no waiting around.",
+      "featured": true,
+      "fiveG": true,
+      "stock": "low_stock",
+      "colors": [
+        { "name": "Infinite Black", "hex": "#1C1D21", "family": "Black", "available": true },
+        { "name": "Sand Storm", "hex": "#C5B79D", "family": "Gold", "available": true },
+        { "name": "Emerald", "hex": "#2F5A4B", "family": "Green", "available": false }
+      ],
+      "variants": [
+        { "ram": 12, "storage": 256, "price": 62999, "mrp": 69999, "available": true },
+        { "ram": 16, "storage": 512, "price": 74999, "mrp": 79999, "available": false }
+      ],
+      "specs": {
+        "display": "6.78\" LTPO AMOLED, 165Hz",
+        "camera": "50MP + 50MP + 50MP",
+        "battery": "7300mAh, 120W",
+        "chipset": "Snapdragon 8 Elite Gen 5"
+      },
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "slug": "google-pixel-10",
+      "brand": "Google",
+      "name": "Pixel 10",
+      "tagline": "The camera that keeps up with the family.",
+      "featured": false,
+      "fiveG": true,
+      "stock": "in_stock",
+      "colors": [
+        { "name": "Obsidian", "hex": "#26272A", "family": "Black", "available": true },
+        { "name": "Porcelain", "hex": "#E8E2D6", "family": "White", "available": true },
+        { "name": "Iris", "hex": "#8A92B2", "family": "Blue", "available": true }
+      ],
+      "variants": [
+        { "ram": 12, "storage": 256, "price": 79999, "mrp": 89999, "available": true }
+      ],
+      "specs": {
+        "display": "6.3\" Actua OLED, 120Hz",
+        "camera": "50MP + 48MP Ultra Wide + 10.8MP Tele",
+        "battery": "4970mAh, 30W",
+        "chipset": "Tensor G5"
+      },
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "slug": "vivo-x300",
+      "brand": "Vivo",
+      "name": "Vivo X300",
+      "tagline": "A pocket camera with a really good phone attached.",
+      "featured": false,
+      "fiveG": true,
+      "stock": "in_stock",
+      "colors": [
+        { "name": "Phantom Black", "hex": "#25262B", "family": "Black", "available": true },
+        { "name": "Mist Blue", "hex": "#9AAEBE", "family": "Blue", "available": true },
+        { "name": "Cream", "hex": "#E6DCC7", "family": "Gold", "available": false }
+      ],
+      "variants": [
+        { "ram": 12, "storage": 256, "price": 69999, "mrp": 79999, "available": true },
+        { "ram": 16, "storage": 512, "price": 79999, "mrp": 89999, "available": false }
+      ],
+      "specs": {
+        "display": "6.31\" AMOLED, 120Hz",
+        "camera": "200MP + 50MP + 50MP",
+        "battery": "6040mAh, 90W",
+        "chipset": "Dimensity 9500"
+      },
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "slug": "nothing-phone-3",
+      "brand": "Nothing",
+      "name": "Nothing Phone (3)",
+      "tagline": "For the person who wants a phone that looks like nothing else.",
+      "featured": false,
+      "fiveG": true,
+      "stock": "low_stock",
+      "colors": [
+        { "name": "Black", "hex": "#202124", "family": "Black", "available": true },
+        { "name": "White", "hex": "#EAE6DE", "family": "White", "available": true }
+      ],
+      "variants": [
+        { "ram": 12, "storage": 256, "price": 49999, "mrp": 59999, "available": true },
+        { "ram": 16, "storage": 512, "price": 57999, "mrp": 64999, "available": false }
+      ],
+      "specs": {
+        "display": "6.67\" AMOLED, 120Hz",
+        "camera": "50MP + 50MP + 50MP",
+        "battery": "5500mAh, 65W",
+        "chipset": "Snapdragon 8s Gen 4"
+      },
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "slug": "redmi-note-15-pro-plus-5g",
+      "brand": "Redmi",
+      "name": "Note 15 Pro+ 5G",
+      "tagline": "The all-rounder most families walk out with.",
+      "featured": false,
+      "fiveG": true,
+      "stock": "in_stock",
+      "colors": [
+        { "name": "Midnight Black", "hex": "#25262A", "family": "Black", "available": true },
+        { "name": "Glacier Blue", "hex": "#8BA8BF", "family": "Blue", "available": true },
+        { "name": "Frost Gold", "hex": "#CDB998", "family": "Gold", "available": true }
+      ],
+      "variants": [
+        { "ram": 8, "storage": 256, "price": 29999, "mrp": 35999, "available": true },
+        { "ram": 12, "storage": 256, "price": 32999, "mrp": 38999, "available": true }
+      ],
+      "specs": {
+        "display": "6.83\" AMOLED, 120Hz",
+        "camera": "200MP + 8MP + 2MP",
+        "battery": "6200mAh, 90W",
+        "chipset": "Snapdragon 7s Gen 4"
+      },
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "slug": "realme-gt-8",
+      "brand": "Realme",
+      "name": "Realme GT 8",
+      "tagline": "Flagship speed without the flagship bill.",
+      "featured": false,
+      "fiveG": true,
+      "stock": "on_order",
+      "colors": [
+        { "name": "Black", "hex": "#222327", "family": "Black", "available": false },
+        { "name": "Green", "hex": "#3E6653", "family": "Green", "available": false },
+        { "name": "White", "hex": "#E6E2D9", "family": "White", "available": false }
+      ],
+      "variants": [
+        { "ram": 12, "storage": 256, "price": 44999, "mrp": 52999, "available": false },
+        { "ram": 16, "storage": 512, "price": 52999, "mrp": 59999, "available": false }
+      ],
+      "specs": {
+        "display": "6.78\" AMOLED, 144Hz",
+        "camera": "50MP + 50MP + 8MP",
+        "battery": "7000mAh, 120W",
+        "chipset": "Snapdragon 8 Elite"
+      },
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "slug": "oppo-reno-15-pro",
+      "brand": "Oppo",
+      "name": "Reno 15 Pro",
+      "tagline": "Slim, bright and very good at portraits.",
+      "featured": false,
+      "fiveG": true,
+      "stock": "in_stock",
+      "colors": [
+        { "name": "Black", "hex": "#24252A", "family": "Black", "available": true },
+        { "name": "Purple", "hex": "#B7A8C8", "family": "Purple", "available": true }
+      ],
+      "variants": [
+        { "ram": 12, "storage": 256, "price": 49999, "mrp": 57999, "available": true }
+      ],
+      "specs": {
+        "display": "6.59\" AMOLED, 120Hz",
+        "camera": "50MP + 50MP + 8MP",
+        "battery": "6200mAh, 80W",
+        "chipset": "Dimensity 8450"
+      },
+      "updatedAt": "2026-10-30"
+    }
+  ],
+  "festival": {
+    "enabled": true,
+    "theme": "diwali",
+    "name": "Diwali",
+    "season": "Diwali 2026",
+    "headline": "This {name}, the counter price drops.",
+    "intro": "The brands send their festival schemes through the shop, and Imran passes them on whole — the iPhone 17 Lavender at ₹84,999, the iPhone 16 at ₹69,999, and up to ₹5,000 off the Motorola range. Every variant and every colour in the posters below is on the shelf.",
+    "window": "Diwali week · while stocks last",
+    "windowNote": "Counter prices at New Usmanpura. Message before you travel on a holiday and we will keep a unit aside.",
+    "deals": [
+      {
+        "slug": "iphone-16",
+        "headline": "iPhone 16",
+        "subhead": "Built for what's next — at a Diwali price.",
+        "badge": "Diwali special discount",
+        "image": "/images/festival/iphone-16.webp",
+        "width": 291,
+        "height": 270,
+        "regularPrice": 89999,
+        "offerPrice": 69999,
+        "details": [
+          "A18 chip",
+          "6.1\" Super Retina XDR display",
+          "48MP Fusion camera",
+          "All-day battery"
+        ],
+        "note": "₹20,000 off the regular counter price."
+      },
+      {
+        "slug": "iphone-17",
+        "headline": "iPhone 17 · Lavender",
+        "subhead": "The new one, discounted for the festival.",
+        "badge": "Diwali special discount",
+        "image": "/images/festival/iphone-17.webp",
+        "width": 266,
+        "height": 284,
+        "regularPrice": 99999,
+        "offerPrice": 84999,
+        "details": [
+          "6.3\" Super Retina XDR, 120Hz",
+          "A19 chip",
+          "48MP dual Fusion camera",
+          "Fast charging support"
+        ],
+        "note": "₹15,000 off the regular counter price."
+      },
+      {
+        "slug": "motorola-diwali",
+        "headline": "Motorola, up to ₹5,000 off",
+        "subhead": "G06 to Edge 70 Pro — every model, variant and colour on the shelf.",
+        "badge": "Best offer on Motorola",
+        "image": "/images/festival/motorola-diwali.webp",
+        "width": 336,
+        "height": 321,
+        "discountLabel": "Up to ₹5,000 off",
+        "details": [
+          "Moto G06 · G37 · G37 Power · G57 Power",
+          "Moto Edge 60 Fusion · 60 Pro · 70 Fusion · 70 Pro",
+          "Extra up to 10% credit-card discount"
+        ],
+        "note": "Assured gift with every Diwali purchase."
+      }
+    ],
+    "perks": [
+      { "label": "Card discount", "detail": "An extra up to 10% off on VISA and RuPay credit cards." },
+      { "label": "Assured gift", "detail": "Every Diwali purchase leaves with a gift, while the stack lasts." },
+      { "label": "Every variant", "detail": "All RAM and storage options in the posters are available at the counter." },
+      { "label": "Exchange", "detail": "Bring your old phone — we value it in front of you before you pay." }
+    ],
+    "fineprint": "Festival prices apply to units in stock at Mobile House, New Usmanpura, during Diwali week. The credit-card discount is offered by the issuing bank and may be capped per card. Posters are brand creatives; the price on your GST bill is the price you pay."
+  },
+  "offers": [
+    {
+      "productSlug": "samsung-galaxy-a17-5g",
+      "label": "Festive counter price",
+      "price": 24999,
+      "mrp": 34999
+    },
+    {
+      "productSlug": "samsung-galaxy-a57-5g",
+      "label": "Best price this week",
+      "price": 42999,
+      "mrp": 62999
+    },
+    {
+      "productSlug": "samsung-galaxy-s25-ultra",
+      "label": "Flagship offer",
+      "price": 86999,
+      "mrp": 99999
+    }
+  ],
+  "reels": [],
+  "awards": [
+    {
+      "slug": "xiaomi-gold-club",
+      "title": "Xiaomi Gold Club",
+      "issuer": "Xiaomi India",
+      "period": "Jan – Jun 2024",
+      "summary": "Awarded for exceptional performance and commitment, welcoming Mobile House into the Xiaomi Gold Club for January to June 2024.",
+      "image": "/images/awards/xiaomi-gold-club.webp",
+      "width": 1600,
+      "height": 1219
+    },
+    {
+      "slug": "xiaomi-silver-partner",
+      "title": "Xiaomi Silver Partner",
+      "issuer": "Xiaomi India",
+      "period": "Jul – Dec 2023",
+      "summary": "Presented for outstanding performance and commitment to excellence, valid from July to December 2023 under the Xiaomi Partner Engagement Program.",
+      "image": "/images/awards/xiaomi-silver-partner.webp",
+      "width": 1280,
+      "height": 954
+    },
+    {
+      "slug": "nsso-participation",
+      "title": "NSSO Participation",
+      "issuer": "Government of India · NSSO",
+      "period": "Consumer Price Index",
+      "summary": "Certificate of participation for price collection for the Consumer Price Index, issued by the National Sample Survey Office, Regional Office Aurangabad.",
+      "image": "/images/awards/nsso-participation.webp",
+      "width": 1599,
+      "height": 1088
+    }
+  ],
+  "reviews": {
+    "quotes": []
+  }
+}
