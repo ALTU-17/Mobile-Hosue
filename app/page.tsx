@@ -7,6 +7,7 @@ import { Hero } from "@/components/Hero";
 import { BrandRail } from "@/components/BrandRail";
 import { FestivalOffers } from "@/components/FestivalOffers";
 import { Catalog } from "@/components/Catalog";
+import { SheetProducts } from "@/components/SheetProducts";
 import { PromiseSection } from "@/components/PromiseSection";
 import { ReelsSection } from "@/components/ReelsSection";
 import { ReviewsSection } from "@/components/ReviewsSection";
@@ -41,6 +42,13 @@ export default function HomePage() {
           sampleData={site.store.sampleData}
           updatedAt={formatUpdated(site.store.updatedAt)}
         />
+        {/*
+          Preview block: products read from a Google Sheet by the visitor's
+          browser (content/sheet-demo.csv until SHEET_CSV_URL is set), so sheet
+          edits need no rebuild. Comment out the single line below to remove the
+          section entirely — nothing else on the page depends on it.
+        */}
+        <SheetProducts />
         <PromiseSection />
         <ReelsSection reels={site.reels} store={site.store} />
         <ReviewsSection />

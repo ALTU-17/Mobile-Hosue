@@ -2,9 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { site, store } from "@/lib/catalog";
-import { generalWhatsAppUrl } from "@/lib/whatsapp";
 import { BrandLockup } from "@/components/BrandMark";
-import { PhoneIcon, WhatsAppIcon } from "@/components/Icons";
+import { InstagramIcon, PhoneIcon } from "@/components/Icons";
 
 const tickerItems = [
   "GST bill with every phone",
@@ -207,13 +206,14 @@ export function SiteHeader() {
               </a>
 
               <a
-                className="btn btn--small nav__wa"
-                href={generalWhatsAppUrl}
+                className="btn btn--small nav__ig"
+                href={store.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`${store.instagramHandle} on Instagram`}
               >
-                <WhatsAppIcon />
-                <span className="nav__wa-text">WhatsApp</span>
+                <InstagramIcon />
+                <span className="nav__ig-text">Instagram</span>
               </a>
 
               <button
@@ -291,12 +291,12 @@ export function SiteHeader() {
           </a>
           <a
             className="btn"
-            href={generalWhatsAppUrl}
+            href={store.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <WhatsAppIcon />
-            WhatsApp us
+            <InstagramIcon />
+            Instagram
           </a>
         </div>
       </div>

@@ -1,0 +1,12 @@
+slug,brand,name,tagline,stock,ram,storage,price,mrp,available,colour,hex,family,colour_available,image
+apple-iphone-16,Apple,iPhone 16,"A18 chip, Camera Control and all-day battery.",in_stock,8,128,69999,89999,TRUE,Ultramarine,#3C5FA8,Blue,TRUE,
+apple-iphone-16,Apple,iPhone 16,"A18 chip, Camera Control and all-day battery.",in_stock,8,128,69999,89999,TRUE,White,#F5F3EE,White,TRUE,
+apple-iphone-16,Apple,iPhone 16,"A18 chip, Camera Control and all-day battery.",in_stock,8,256,79999,99999,FALSE,Ultramarine,#3C5FA8,Blue,TRUE,
+apple-iphone-16,Apple,iPhone 16,"A18 chip, Camera Control and all-day battery.",in_stock,8,256,79999,99999,FALSE,White,#F5F3EE,White,TRUE,
+apple-iphone-17,Apple,iPhone 17,Lavender finish with the A19 chip and a ProMotion screen.,low_stock,8,256,84999,99999,TRUE,Lavender,#C9BCE0,Purple,TRUE,
+apple-iphone-17,Apple,iPhone 17,Lavender finish with the A19 chip and a ProMotion screen.,low_stock,8,256,84999,99999,TRUE,Black,#23222A,Black,FALSE,
+motorola-g06,Motorola,Moto G06,5G on a budget with a clean stock Android build.,in_stock,4,64,8499,9999,TRUE,Deep Forest,#2F4A3C,Green,TRUE,
+motorola-g06,Motorola,Moto G06,5G on a budget with a clean stock Android build.,in_stock,4,64,8499,9999,TRUE,Silver,#C2C6CA,Silver,TRUE,
+motorola-g06,Motorola,Moto G06,5G on a budget with a clean stock Android build.,in_stock,6,128,9999,11999,TRUE,Deep Forest,#2F4A3C,Green,TRUE,
+motorola-g06,Motorola,Moto G06,5G on a budget with a clean stock Android build.,in_stock,6,128,9999,11999,TRUE,Silver,#C2C6CA,Silver,TRUE,
+motorola-edge-70-pro,Motorola,Edge 70 Pro,Curved pOLED and fast charging for the flagship hunter.,on_order,12,256,34999,39999,TRUE,Bronze Green,#4C5B4A,Green,TRUE,

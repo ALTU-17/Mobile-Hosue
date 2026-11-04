@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { CSSProperties } from "react";
+import type { CSSProperties, MouseEvent as ReactMouseEvent, PointerEvent as ReactPointerEvent } from "react";
 import type { Reel, Store } from "@/lib/schema";
 import { formatFollowers } from "@/lib/hours";
 import { ArrowUpRight, InstagramIcon, PlayIcon } from "@/components/Icons";
@@ -105,9 +105,65 @@ function ReelDialog({ reel, onClose }: { reel: Reel; onClose: () => void }) {
   );
 }
 
+type RailDrag = { pointerId: number; startX: number; startLeft: number; moved: boolean };
+
 export function ReelsSection({ reels, store }: { reels: Reel[]; store: Store }) {
   const [active, setActive] = useState<Reel | null>(null);
   const isPlaceholder = reels.length === 0;
+  const railRef = useRef<HTMLDivElement>(null);
+  const dragRef = useRef<RailDrag | null>(null);
+  const suppressClickRef = useRef(false);
+
+  /* On phones the rail scrolls natively; with a mouse (and in the desktop
+     preview at a phone width) there is no touch and the scrollbar is hidden,
+     so drag-to-scroll is the only way to reach the next cards. */
+  const handlePointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
+    const rail = railRef.current;
+    if (!rail || event.pointerType !== "mouse" || event.button !== 0) return;
+    if (rail.scrollWidth <= rail.clientWidth) return;
+
+    dragRef.current = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startLeft: rail.scrollLeft,
+      moved: false,
+    };
+    rail.classList.add("is-dragging");
+    try {
+      rail.setPointerCapture(event.pointerId);
+    } catch {
+      /* synthetic pointers have nothing to capture */
+    }
+  };
+
+  const handlePointerMove = (event: ReactPointerEvent<HTMLDivElement>) => {
+    const rail = railRef.current;
+    const drag = dragRef.current;
+    if (!rail || !drag || drag.pointerId !== event.pointerId) return;
+
+    const delta = event.clientX - drag.startX;
+    if (Math.abs(delta) > 4) drag.moved = true;
+    rail.scrollLeft = drag.startLeft - delta;
+  };
+
+  const endDrag = () => {
+    const rail = railRef.current;
+    const drag = dragRef.current;
+    if (!drag) return;
+
+    suppressClickRef.current = drag.moved;
+    dragRef.current = null;
+    rail?.classList.remove("is-dragging");
+    if (rail?.hasPointerCapture(drag.pointerId)) rail.releasePointerCapture(drag.pointerId);
+    if (drag.moved) window.setTimeout(() => (suppressClickRef.current = false), 400);
+  };
+
+  const handleClickCapture = (event: ReactMouseEvent<HTMLDivElement>) => {
+    if (!suppressClickRef.current) return;
+    suppressClickRef.current = false;
+    event.preventDefault();
+    event.stopPropagation();
+  };
 
   return (
     <section className="reels section" id="reels" aria-labelledby="reels-heading">
@@ -150,7 +206,15 @@ export function ReelsSection({ reels, store }: { reels: Reel[]; store: Store }) 
         </div>
 
         <div>
-          <div className="reels__rail">
+          <div
+            className="reels__rail"
+            ref={railRef}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={endDrag}
+            onPointerCancel={endDrag}
+            onClickCapture={handleClickCapture}
+          >
             {isPlaceholder
               ? placeholderReels.map((reel) => (
                   <a
