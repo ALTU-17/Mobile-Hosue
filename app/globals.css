@@ -4645,6 +4645,77 @@ body.modal-open {
   white-space: nowrap;
 }
 
+.footer__credit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem 1rem;
+  margin-top: 1.15rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid rgba(242, 235, 221, 0.09);
+  color: #6d6457;
+  font-family: var(--font-mono);
+  font-size: 0.54rem;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.footer__credit a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.footer__credit a:hover {
+  color: var(--brass-bright);
+}
+
+.footer__credit a svg {
+  flex: none;
+  width: 0.85rem;
+  height: 0.85rem;
+  color: var(--brass);
+}
+
+.footer__credit strong {
+  color: var(--bone-dim);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.footer__credit-sep {
+  width: 1px;
+  height: 0.7rem;
+  background: var(--line-soft);
+}
+
+@media (max-width: 700px) {
+  .footer__credit {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+    font-size: 0.58rem;
+    text-align: center;
+  }
+
+  .footer__credit-sep {
+    display: none;
+  }
+
+  .footer__credit a {
+    justify-content: center;
+    min-height: 28px;
+  }
+
+  .footer__credit a span {
+    word-break: break-word;
+  }
+}
+
 /* ---------- mobile bar ---------- */
 
 .mobile-bar {
