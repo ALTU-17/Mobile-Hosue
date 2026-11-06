@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo, Bricolage_Grotesque, DM_Mono } from "next/font/google";
+import { ScrollBattery } from "@/components/ScrollBattery";
 import { site } from "@/lib/catalog";
 import { siteDescription, siteTitle, siteUrl } from "@/lib/site-url";
 import "./globals.css";
@@ -131,6 +132,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        <ScrollBattery />
         <div className="grain" aria-hidden="true" />
       </body>
     </html>

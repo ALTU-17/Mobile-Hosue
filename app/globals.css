@@ -7952,3 +7952,139 @@ html[data-theme="light"] .theme-toggle__moon {
     border-radius: 12px;
   }
 }
+/* ---------- type-c cursor ---------- */
+
+/* The whole page points with a Type-C cable; the hotspot sits on the plug tip. */
+html {
+  cursor: url("/cursor/type-c.svg") 4 4, auto;
+}
+
+/* Links and buttons plug in: the port lights up. Disabled controls keep the
+   not-allowed cursor from the rules above because their specificity is higher. */
+html :is(a[href], button, summary, [role="button"]) {
+  cursor: url("/cursor/type-c-pointer.svg") 4 4, pointer;
+}
+
+/* Typing still wants a bar, and the drag rails still want a hand. */
+html :is(input:not([type="button"]):not([type="submit"]), textarea, select) {
+  cursor: text;
+}
+
+html .reels__rail {
+  cursor: grab;
+}
+
+html .reels__rail.is-dragging {
+  cursor: grabbing;
+}
+
+/* ---------- scroll battery ---------- */
+
+/* On wide screens the battery *is* the scrollbar: the native one steps aside. */
+@media (min-width: 1024px) {
+  html {
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+.scroll-battery {
+  position: fixed;
+  top: 50%;
+  right: 16px;
+  z-index: 44;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (min-width: 1024px) {
+  .scroll-battery {
+    display: flex;
+  }
+}
+
+.scroll-battery__nub {
+  width: 12px;
+  height: 5px;
+  border-radius: 2px 2px 0 0;
+  background: var(--brass);
+  opacity: 0.72;
+}
+
+.scroll-battery__body {
+  position: relative;
+  width: 26px;
+  height: 128px;
+  padding: 3px;
+  border: 1.5px solid var(--brass);
+  border-radius: 9px;
+  background: var(--ink-raised);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* Quarter-charge ticks, so an empty cell still reads as a battery. */
+.scroll-battery__body::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 5px;
+  background-image: repeating-linear-gradient(
+    to top,
+    transparent 0,
+    transparent calc(25% - 1px),
+    var(--line) calc(25% - 1px),
+    var(--line) 25%
+  );
+}
+
+.scroll-battery__fill {
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  height: 0%;
+  border-radius: 5px;
+  background: linear-gradient(to top, var(--brass), var(--marigold));
+  box-shadow: 0 0 14px rgba(240, 163, 58, 0.32);
+  transition: height 0.12s linear;
+}
+
+.scroll-battery__label {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  color: var(--brass);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.scroll-battery__label[data-charging="full"] {
+  color: var(--marigold);
+}
+
+html[data-theme="light"] .scroll-battery__body {
+  background: #f7f2e7;
+  box-shadow: 0 8px 20px rgba(23, 19, 13, 0.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-battery__fill {
+    transition: none;
+  }
+}
+
+@media (max-height: 520px) {
+  .scroll-battery {
+    display: none;
+  }
+}
