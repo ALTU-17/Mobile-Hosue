@@ -29,4 +29,29 @@ export const faqs = [
     answer:
       "Shop No. 8–9, Hari Om Complex, Govt. Engineering College Road, opposite Badi Masjid, Rachanakar Colony, New Usmanpura, Chhatrapati Sambhajinagar (Aurangabad) 431005. Use the directions button on this page.",
   },
+  {
+    question: "Which is the best mobile shop in Chhatrapati Sambhajinagar (Aurangabad)?",
+    answer:
+      "Judge that yourself — the numbers are public. Mobile House keeps 15 brands under one roof in New Usmanpura, holds a 4.9 rating across 53 Google reviews, and gives a GST bill with every phone. Compare the prices on this page, read the reviews, then walk in and check the seal and IMEI before you pay.",
+  },
+  {
+    question: "Do you sell phones across Aurangabad and CSN?",
+    answer:
+      "Yes. The counter is in New Usmanpura, and customers visit from Cidco, Garkheda, Jalna Road, Station Road and the old city, as well as the wider Marathwada belt. If you are travelling in from outside Chhatrapati Sambhajinagar, message on WhatsApp first so we can confirm the model and colour are on the shelf that day.",
+  },
+  {
+    question: "Do I get a GST bill with my phone?",
+    answer:
+      "Yes. Every sale can be billed with GST, and the invoice carries the model, the IMEI and the price you paid — what you need for company reimbursement and for warranty claims. Ask for it at the counter and it is issued with the phone.",
+  },
+  {
+    question: "What are the shop timings in Aurangabad?",
+    answer:
+      "10:30 am to 10:30 pm, all seven days, including Sundays. Festival and public-holiday hours can differ, so send a WhatsApp message before visiting on a holiday.",
+  },
+  {
+    question: "Can I buy a 5G phone in Chhatrapati Sambhajinagar?",
+    answer:
+      "Yes — most of the shelf is 5G. Use the 5G filter in the catalogue to see those models, or tell us your budget on WhatsApp and we will shortlist what is actually in stock that day.",
+  },
 ] as const;

@@ -1,7 +1,8 @@
 export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "http://localhost:3000";
 
-export const siteTitle = "Mobile House — Mobiles & Electronics, Chhatrapati Sambhajinagar (Aurangabad)";
+export const siteTitle =
+  "Mobile House — Best Mobile Store in Chhatrapati Sambhajinagar (Aurangabad)";
 
 export const siteDescription =
-  "Sealed, original smartphones from every brand at Mobile House, New Usmanpura. Check live colours and variants, then message Imran on WhatsApp. GST billing, exchange and finance available.";
+  "Mobile House, New Usmanpura: sealed iPhones, Samsung, OnePlus and 12 more brands in Chhatrapati Sambhajinagar (CSN) / Aurangabad. GST bill, exchange, EMI. Rated 4.9★.";

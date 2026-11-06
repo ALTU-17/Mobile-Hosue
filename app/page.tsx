@@ -1,6 +1,6 @@
 import { site, formatUpdated } from "@/lib/catalog";
 import { faqs } from "@/lib/faq";
-import { faqSchema, storeSchema } from "@/lib/seo";
+import { seoGraph } from "@/lib/seo";
 import { Preloader } from "@/components/Preloader";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Hero } from "@/components/Hero";
@@ -18,7 +18,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { MobileBar } from "@/components/MobileBar";
 
 export default function HomePage() {
-  const jsonLd = [storeSchema(), faqSchema([...faqs])];
+  const jsonLd = seoGraph(faqs);
 
   return (
     <>

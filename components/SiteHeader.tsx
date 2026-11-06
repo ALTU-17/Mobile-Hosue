@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { site, store } from "@/lib/catalog";
 import { BrandLockup } from "@/components/BrandMark";
 import { InstagramIcon, PhoneIcon } from "@/components/Icons";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const tickerItems = [
   "GST bill with every phone",
@@ -204,6 +205,8 @@ export function SiteHeader() {
                 <PhoneIcon />
                 <span className="nav__call-text">{store.phoneDisplay}</span>
               </a>
+
+              <ThemeToggle />
 
               <a
                 className="btn btn--small nav__ig"
