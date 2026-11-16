@@ -27,7 +27,7 @@ const answerEngineCrawlers = [
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      { userAgent: "*", allow: "/" },
+      { userAgent: "*", allow: "/", disallow: ["/admin"] },
       ...answerEngineCrawlers.map((userAgent) => ({ userAgent, allow: "/" })),
     ],
     sitemap: `${siteUrl}/sitemap.xml`,

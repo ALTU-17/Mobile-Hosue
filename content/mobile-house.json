@@ -28,6 +28,12 @@
     "sampleData": true,
     "updatedAt": "2026-10-30"
   },
+  "counter": {
+    "eyebrow": "01 / The Counter",
+    "titleLine1": "Pick a phone.",
+    "titleLine2": "Pick a colour.",
+    "intro": "The shelf, as it stands. Filter by brand, budget or colour, then open a phone to see exactly which variants and finishes are available. No guesswork, no fake “in stock” badges."
+  },
   "brands": [
     "Apple",
     "Samsung",

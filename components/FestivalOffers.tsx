@@ -1,9 +1,11 @@
 "use client";
 
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Festival, FestivalDeal } from "@/lib/schema";
 import { formatINR } from "@/lib/catalog";
+import { isRemoteImage } from "@/lib/images";
 import { whatsappUrl } from "@/lib/whatsapp";
 import { ArrowUpRight, WhatsAppIcon } from "@/components/Icons";
 
@@ -269,7 +271,14 @@ function BurstLayer({ bursts }: { bursts: Burst[] }) {
 /*  Main component                                                   */
 /* ================================================================ */
 
-export function FestivalOffers({ festival }: { festival: Festival }) {
+export function FestivalOffers({
+  festival,
+  showPageLink = true,
+}: {
+  festival: Festival;
+  /** Off on /festival itself, so the page never links to itself. */
+  showPageLink?: boolean;
+}) {
   const sectionRef = useRef<HTMLElement | null>(null);
   const hasAutoFired = useRef(false);
 
@@ -420,6 +429,13 @@ export function FestivalOffers({ festival }: { festival: Festival }) {
             </h2>
 
             <p className="festival__intro">{festival.intro}</p>
+
+            {showPageLink && (
+              <a className="text-link festival__page-link" href="/festival">
+                See the full festival page
+                <ArrowUpRight />
+              </a>
+            )}
           </div>
 
           <div className="festival__window">
@@ -444,6 +460,7 @@ export function FestivalOffers({ festival }: { festival: Festival }) {
             const saving =
               deal.regularPrice && deal.offerPrice ? deal.regularPrice - deal.offerPrice : 0;
             const highlight = saving > 0 ? `${formatINR(saving)} off` : deal.discountLabel;
+            const posterAlt = `${festival.name} offer poster at Mobile House: ${deal.headline}`;
 
             return (
               <li
@@ -452,13 +469,23 @@ export function FestivalOffers({ festival }: { festival: Festival }) {
                 style={{ "--deal-i": index } as React.CSSProperties}
               >
                 <div className="festival-deal__poster">
-                  <Image
-                    src={deal.image}
-                    alt={`${festival.name} offer poster at Mobile House: ${deal.headline}`}
-                    width={deal.width}
-                    height={deal.height}
-                    loading="lazy"
-                  />
+                  {isRemoteImage(deal.image) ? (
+                    <img
+                      src={deal.image}
+                      alt={posterAlt}
+                      loading="lazy"
+                      decoding="async"
+                      referrerPolicy="no-referrer"
+                    />
+                  ) : (
+                    <Image
+                      src={deal.image}
+                      alt={posterAlt}
+                      width={deal.width ?? 640}
+                      height={deal.height ?? 640}
+                      loading="lazy"
+                    />
+                  )}
                   {isDiwali && <span className="festival-deal__glow" aria-hidden="true" />}
                 </div>
 

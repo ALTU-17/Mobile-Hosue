@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import type { Product, ProductColor, ProductVariant, SiteData } from "@/lib/schema";
+import type { Counter, Product, ProductColor, ProductVariant, SiteData } from "@/lib/schema";
 import { DeviceArt } from "@/components/DeviceArt";
 import {
   ArrowUpRight,
@@ -16,6 +16,7 @@ import {
 type Offer = SiteData["offers"][number];
 
 type CatalogProps = {
+  counter: Counter;
   products: Product[];
   offers: Offer[];
   whatsappRaw: string;
@@ -365,6 +366,7 @@ function ProductCard({
 }
 
 export function Catalog({
+  counter,
   products,
   offers,
   whatsappRaw,
@@ -474,19 +476,15 @@ export function Catalog({
         <div className="catalog__head">
           <div className="section-head">
             <div className="section-head__top">
-              <span className="eyebrow">01 / The Counter</span>
+              <span className="eyebrow">{counter.eyebrow}</span>
               <h2 className="section-title" id="counter-heading">
-                Pick a phone.
+                {counter.titleLine1}
                 <br />
-                Pick a colour.
+                {counter.titleLine2}
               </h2>
             </div>
             <div className="section-head__aside">
-              <p className="section-intro">
-                The shelf, as it stands. Filter by brand, budget or colour, then open a phone to see
-                exactly which variants and finishes are available. No guesswork, no fake &ldquo;in
-                stock&rdquo; badges.
-              </p>
+              <p className="section-intro">{counter.intro}</p>
               <span className="text-link" aria-hidden="true">
                 Updated {updatedAt}
               </span>

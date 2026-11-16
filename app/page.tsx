@@ -34,6 +34,7 @@ export default function HomePage() {
         <BrandRail />
         <FestivalOffers festival={site.festival} />
         <Catalog
+          counter={site.counter}
           products={site.products}
           offers={site.offers}
           whatsappRaw={site.store.whatsappRaw}

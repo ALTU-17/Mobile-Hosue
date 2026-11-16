@@ -44,6 +44,15 @@ for (const [index, offer] of (data.offers ?? []).entries()) {
   }
 }
 
+const counter = data.counter;
+if (counter) {
+  for (const key of ["eyebrow", "titleLine1", "titleLine2", "intro"]) {
+    if (!counter[key] || typeof counter[key] !== "string") {
+      errors.push(`counter.${key} must be a non-empty string`);
+    }
+  }
+}
+
 const festival = data.festival;
 if (festival) {
   const themes = ["diwali", "eid", "navratri", "christmas", "plain"];
@@ -56,7 +65,16 @@ if (festival) {
   for (const [index, deal] of (festival.deals ?? []).entries()) {
     const label = deal.slug ? `festival.deals[${deal.slug}]` : `festival.deals[${index}]`;
     if (!deal.headline) errors.push(`${label}: headline is required`);
-    if (!deal.image) errors.push(`${label}: image is required`);
+    if (!deal.image) {
+      errors.push(`${label}: image is required`);
+    } else if (!/^https?:\/\//i.test(deal.image) && !deal.image.startsWith("/")) {
+      errors.push(`${label}: image must be an https URL or a path starting with /`);
+    }
+    for (const key of ["width", "height"]) {
+      if (deal[key] !== undefined && !(deal[key] > 0)) {
+        errors.push(`${label}: ${key} must be a positive number when set`);
+      }
+    }
     if (!deal.offerPrice && !deal.discountLabel) {
       errors.push(`${label}: add offerPrice or discountLabel`);
     }

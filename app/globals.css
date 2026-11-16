@@ -2315,6 +2315,23 @@ p {
   text-transform: uppercase;
 }
 
+/* A real photo of the phone replaces the drawn one when content supplies it. */
+.device-art__photo {
+  position: relative;
+  z-index: 1;
+  inline-size: min(74%, 260px);
+  block-size: auto;
+  max-block-size: 78%;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 26px 32px rgba(0, 0, 0, 0.42));
+}
+
+.device-art--large .device-art__photo {
+  inline-size: min(84%, 420px);
+  max-block-size: 84%;
+}
+
 /* ---------- product dialog ---------- */
 
 .product-modal {
@@ -6003,6 +6020,13 @@ body.modal-open {
   color: var(--fest-copy);
   font-size: clamp(0.95rem, 1.05vw, 1.05rem);
   line-height: 1.75;
+}
+
+.festival__page-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.9rem;
 }
 
 .festival__window {

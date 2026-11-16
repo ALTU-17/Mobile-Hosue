@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { site, store } from "@/lib/catalog";
 import { BrandLockup } from "@/components/BrandMark";
 import { InstagramIcon, PhoneIcon } from "@/components/Icons";
@@ -47,6 +48,9 @@ function TickerGroup() {
 }
 
 export function SiteHeader() {
+  const pathname = usePathname();
+  /** Section anchors live on the homepage; prefix them from other routes. */
+  const hrefFor = (href: string) => (pathname === "/" ? href : `/${href}`);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeId, setActiveId] = useState<string>("");
@@ -149,8 +153,9 @@ export function SiteHeader() {
 
   const handleNavClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-      const id = href.slice(1);
-      const target = document.getElementById(id);
+      const hashIndex = href.indexOf("#");
+      const id = hashIndex === -1 ? "" : href.slice(hashIndex + 1);
+      const target = id ? document.getElementById(id) : null;
       if (target) {
         e.preventDefault();
         const headerOffset = 90;
@@ -190,8 +195,8 @@ export function SiteHeader() {
                   <a
                     key={item.href}
                     className={`nav__link${isActive ? " is-active" : ""}`}
-                    href={item.href}
-                    onClick={(e) => handleNavClick(e, item.href)}
+                    href={hrefFor(item.href)}
+                    onClick={(e) => handleNavClick(e, hrefFor(item.href))}
                     aria-current={isActive ? "true" : undefined}
                   >
                     {item.label}
@@ -276,9 +281,9 @@ export function SiteHeader() {
             return (
               <a
                 key={item.href}
-                href={item.href}
+                href={hrefFor(item.href)}
                 className={`mobile-nav__link${isActive ? " is-active" : ""}`}
-                onClick={(e) => handleNavClick(e, item.href)}
+                onClick={(e) => handleNavClick(e, hrefFor(item.href))}
                 aria-current={isActive ? "true" : undefined}
               >
                 {item.label}

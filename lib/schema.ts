@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-const colorFamilies = [
+export const colorFamilies = [
   "Black",
   "White",
   "Silver",
@@ -17,6 +17,8 @@ const colorSchema = z.object({
   hex: z.string().regex(/^#[0-9a-fA-F]{6}$/, "Use a six-digit hex colour"),
   family: z.enum(colorFamilies),
   available: z.boolean(),
+  /** Optional photo for this colour: an https URL or a path inside public/. */
+  image: z.string().min(1).optional(),
 });
 
 const variantSchema = z.object({
@@ -99,8 +101,9 @@ const festivalDealSchema = z.object({
   subhead: z.string().min(1),
   badge: z.string().min(1).optional(),
   image: z.string().min(1),
-  width: z.number().int().positive(),
-  height: z.number().int().positive(),
+  /** A pasted URL may not know its pixel size, so both are optional. */
+  width: z.number().int().positive().optional(),
+  height: z.number().int().positive().optional(),
   regularPrice: z.number().int().positive().optional(),
   offerPrice: z.number().int().positive().optional(),
   discountLabel: z.string().min(1).optional(),
@@ -129,9 +132,26 @@ const festivalSchema = z.object({
   fineprint: z.string().min(1),
 });
 
+const defaultCounter = {
+  eyebrow: "01 / The Counter",
+  titleLine1: "Pick a phone.",
+  titleLine2: "Pick a colour.",
+  intro:
+    "The shelf, as it stands. Filter by brand, budget or colour, then open a phone to see exactly which variants and finishes are available. No guesswork, no fake \u201cin stock\u201d badges.",
+};
+
+/** Copy for the "01 / The Counter" heading, editable from /admin. */
+const counterSchema = z.object({
+  eyebrow: z.string().min(1),
+  titleLine1: z.string().min(1),
+  titleLine2: z.string().min(1),
+  intro: z.string().min(1),
+});
+
 export const siteDataSchema = z
   .object({
     store: storeSchema,
+    counter: counterSchema.default(defaultCounter),
     festival: festivalSchema,
     brands: z.array(z.string().min(1)).min(1),
     products: z.array(productSchema).min(1),
@@ -225,6 +245,7 @@ export type Product = SiteData["products"][number];
 export type ProductVariant = Product["variants"][number];
 export type ProductColor = Product["colors"][number];
 export type Store = SiteData["store"];
+export type Counter = SiteData["counter"];
 export type Reel = SiteData["reels"][number];
 export type Award = SiteData["awards"][number];
 export type Festival = SiteData["festival"];

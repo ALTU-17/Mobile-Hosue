@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { site } from "@/lib/catalog";
 import { generalWhatsAppUrl } from "@/lib/whatsapp";
 import { BrandMark } from "@/components/BrandMark";
@@ -39,11 +40,12 @@ export function SiteFooter() {
 
           <div className="footer__col">
             <span className="footer__col-title">Browse</span>
-            <a href="#counter">The counter</a>
-            <a href="#promise">Originality</a>
-            <a href="#reels">On camera</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#visit">Visit the shop</a>
+            <Link href="/#counter">The counter</Link>
+            {site.festival.enabled && <Link href="/festival">Festival offers</Link>}
+            <Link href="/#promise">Originality</Link>
+            <Link href="/#reels">On camera</Link>
+            <Link href="/#reviews">Reviews</Link>
+            <Link href="/#visit">Visit the shop</Link>
           </div>
 
           <div className="footer__col">
