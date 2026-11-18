@@ -6,6 +6,7 @@ import { colorFamilies, festivalThemes, siteDataSchema } from "@/lib/schema";
 import type { FestivalDeal, Product, SiteData } from "@/lib/schema";
 import { ImageField } from "@/components/admin/ImageField";
 import { signOut } from "@/app/admin/actions";
+import { adminAuthEnabled } from "@/lib/admin-config";
 
 const DRAFT_KEY = "mh-admin-draft-v1";
 
@@ -1362,11 +1363,13 @@ export function AdminApp({ initial }: { initial: SiteData }) {
           </div>
           <div className="admin__bar-meta">
             <span className="admin__status">{savedLabel}</span>
-            <form action={signOut}>
-              <button type="submit" className="admin-btn admin-btn--small admin-btn--ghost">
-                Sign out
-              </button>
-            </form>
+            {adminAuthEnabled && (
+              <form action={signOut}>
+                <button type="submit" className="admin-btn admin-btn--small admin-btn--ghost">
+                  Sign out
+                </button>
+              </form>
+            )}
           </div>
         </header>
 

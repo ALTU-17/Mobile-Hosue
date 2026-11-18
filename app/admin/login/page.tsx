@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { adminConfigured, hasAdminSession } from "@/lib/admin-auth";
+import { adminAuthEnabled } from "@/lib/admin-config";
 import { signIn } from "../actions";
 
 export const metadata: Metadata = { title: "Sign in" };
@@ -16,7 +17,8 @@ export default async function AdminLoginPage({
 }: {
   searchParams: Promise<{ error?: string }>;
 }) {
-  if (await hasAdminSession()) redirect("/admin");
+  // While the gate is paused there is nothing to sign in to.
+  if (!adminAuthEnabled || (await hasAdminSession())) redirect("/admin");
 
   const { error } = await searchParams;
   const configured = adminConfigured();
